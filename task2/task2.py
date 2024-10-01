@@ -1,5 +1,5 @@
-circle_file = 'circle'    #change for input()
-dots_file = 'dots'    #change for input()
+circle_file = input()    #change for input()
+dots_file = input()    #change for input()
 
 
 def solution(circle_file, dots_file):
