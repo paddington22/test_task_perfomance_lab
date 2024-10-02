@@ -1,6 +1,15 @@
 import json
+import argparse
 
-tests_path, values_path, report_path = input(), input(), input()
+parser = argparse.ArgumentParser(description='Script arguments')
+parser.add_argument('tests_path', help='Path to tests.json str format')
+parser.add_argument('values_path', help='Path to values.json str format')
+parser.add_argument('report_path', help='Path to report.json str format')
+
+args = parser.parse_args()
+tests_path = args.tests_path
+values_path = args.values_path
+report_path = args.report_path
 
 
 def change_value(obj, values_dict):
