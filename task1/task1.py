@@ -1,9 +1,16 @@
-in_info = input()
+import argparse
+parser = argparse.ArgumentParser(description='Script arguments')
+parser.add_argument('n', help='First arg')
+parser.add_argument('m', help='Second arg')
+
+args = parser.parse_args()
+in_info = [args.n, args.m]
+
 
 def solution(in_info):
     result = []
     try:
-        n, m = [int(i) for i in in_info.split()]
+        n, m = [int(i) for i in in_info]
     except ValueError:
         raise ValueError('N and M must be integer')
     if n <= 0:
