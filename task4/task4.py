@@ -1,5 +1,10 @@
-#
-file_path = input()
+import argparse
+
+parser = argparse.ArgumentParser(description='Script arguments')
+parser.add_argument('file_path', help='Path to massive data')
+
+args = parser.parse_args()
+file_path = args.file_path
 
 
 def solution(file_path):
